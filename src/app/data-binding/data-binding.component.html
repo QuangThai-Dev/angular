@@ -1,0 +1,56 @@
+
+<h1>{{title}}</h1>
+
+<h3>1. Interpolation(one-way)</h3>
+<p>Tên : {{fullName}}</p>
+<p>Tuổi: {{tuoi}}</p>
+<p>Tình trạng hôn nhân: {{isMarried ? 'Đã kết hôn' : 'Độc thân'}}</p>
+
+<p>Username: {{users.username}}</p>
+<p>Email: {{users.email}}</p>
+<p>Role: {{users.role ? 'admin' : 'client'}}</p>
+<img src="{{imgSrc}}" />
+
+<br/>
+<br/>
+<h3>2. Property Binding(one-way)</h3>
+<!-- Cách 1 -->
+<img [src]="imgSrc" alt="" />
+<!-- Cách 2 -->
+<img bind-src="imgSrc" alt="" />
+<br/>
+<br/>
+<button class="btn btn-danger" [disabled]="isDisabled">Hello</button>
+<br/>
+<br/>
+<h3>3. Event Binding(one-way)</h3>
+<button class="btn btn-info" (click)="clickMe()">Cick me !!</button>
+
+<div class="form-group">
+  <label>Email</label>
+  <input type="text" class="form-control" (keyup)="getEmail($event)">
+</div>
+<p>Email: {{email}}</p>
+
+<br/>
+<br/>
+<h3>3. Two-way Binding(ngModel)</h3>
+<div class="form-group">
+  <label>Email</label>
+  <input type="text" class="form-control" [(ngModel)]="email"/>
+</div>
+<p>Emai: {{email}}</p>
+
+<h3>Bài Tập Data Binding</h3>
+
+<div class="form-group">
+  <label>Email</label>
+  <input type="text" class="form-control" [(ngModel)]="email">
+</div>
+<div class="form-group">
+  <label>FullName</label>
+  <input #txtFullName type="text" class="form-control" >
+</div>
+<button class="btn btn-danger" (click)="getfullName(txtFullName.value)">Submit</button>
+<p>Email: {{email}}</p>
+<p>FullName: {{fullName}}</p>

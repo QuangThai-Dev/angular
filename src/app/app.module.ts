@@ -14,6 +14,10 @@ import { FooterEx2Component } from './excercise2/footer-ex2/footer-ex2.component
 import { CarouselComponent } from './excercise2/carousel/carousel.component';
 import { ListcardComponent } from './excercise2/listcard/listcard.component';
 import { Excercise2Component } from './excercise2/excercise2.component';
+import { DataBindingComponent } from './data-binding/data-binding.component';
+import { FormsModule } from '@angular/forms';
+import { DirectivesComponent } from './directives/directives.component';
+import { StructuralComponent } from './directives/structural/structural.component';
 
 //@NgModule: Decorator
 //Các options trong decorator đc gọi là metadata
@@ -31,12 +35,16 @@ import { Excercise2Component } from './excercise2/excercise2.component';
     HeaderEx2Component,
     FooterEx2Component,
     CarouselComponent,
-    ListcardComponent
+    ListcardComponent,
+    DataBindingComponent,
+    DirectivesComponent,
+    StructuralComponent
   ],
   imports: [
     //Nơi khai báo những module được sử dụng ở module này
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   //Nơi khai báo service
   providers: [],
