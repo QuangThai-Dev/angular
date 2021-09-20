@@ -11,9 +11,12 @@ export class StructuralComponent implements OnInit {
   username = "thaivq";
   password = '123'
   age = 0;
-  rappers = ['Đen Vâu','Binz','Karik','Wowy']
+  rappers = ['Đen Vâu','Binz','Karik','Wowy'];
+  selectedColor = "black";
   constructor() { }
-
+  SeletectColor(color: string){
+    this.selectedColor = color
+  }
   login(){
     this.isLoggedIn = true;
   }

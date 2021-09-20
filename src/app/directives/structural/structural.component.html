@@ -41,4 +41,22 @@
     </li>
   </ul>
 </ng-container>
+<br />
+<br />
+<h3>3. *ngSwithCase</h3>
+<div class="form-group">
+  <label>Chọn màu sắc</label>
+  <select #color (change)="SeletectColor(color.value)" class="form-control" >
+    <option value="black">Màu đen</option>
+    <option value="blue">Màu xanh</option>
+    <option value="pink">Màu hồng</option>
+    <option value="red">Màu đỏ</option>
+  </select>
+</div>
+<div [ngSwitch]="selectedColor">
 
+  <div *ngSwitchCase="'blue'" style="color:blue;">Màu xanh</div>
+  <div *ngSwitchCase="'pink'" style="color:pink;">Màu hồng</div>
+  <div *ngSwitchCase="'red'" style="color:red;">Màu đỏ</div>
+  <div *ngSwitchDefault="'black'" style="color:black;">Màu đen</div>
+</div>
