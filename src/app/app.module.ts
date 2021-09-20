@@ -21,6 +21,8 @@ import { StructuralComponent } from './directives/structural/structural.componen
 import { AttributeComponent } from './directives/attribute/attribute.component';
 import { HightlightDirective } from './my-directives/hightlight.directive';
 import { HoverButtonDirective } from './my-directives/hover-button.directive';
+import { InteractionComponent } from './interaction/interaction.component';
+import { ChildComponent } from './interaction/child/child.component';
 
 //@NgModule: Decorator
 //Các options trong decorator đc gọi là metadata
@@ -44,7 +46,9 @@ import { HoverButtonDirective } from './my-directives/hover-button.directive';
     StructuralComponent,
     AttributeComponent,
     HightlightDirective,
-    HoverButtonDirective
+    HoverButtonDirective,
+    InteractionComponent,
+    ChildComponent
   ],
   imports: [
     //Nơi khai báo những module được sử dụng ở module này

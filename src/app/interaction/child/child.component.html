@@ -1,0 +1,36 @@
+
+<h2>Thông tin cá nhân</h2>
+<p>Họ tên: {{myFullName}}</p>
+<p>Tuổi: {{myAge}}</p>
+<h2>Thông tin tài khoản</h2>
+<p>UserName: {{myAccount.username}}</p>
+<p>Email: {{myAccount.email}}</p>
+<p>Role: {{myAccount.role ? 'Quản Trị' : 'Nhân Viên'}}</p>
+<h2>Danh sách tài khoản</h2>
+<table class="table">
+  <thead>
+    <tr>
+      <th>STT</th>
+      <th>Tài Khoản</th>
+      <th>Họ Tên</th>
+      <th>Email</th>
+      <th>Mã Loại Người Dùng</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let account of listAccount; index as idx">
+      <td>{{idx +1}}</td>
+      <td>{{account.taiKhoan}}</td>
+      <td>{{account.hoTen}}</td>
+      <td>{{account.email}}</td>
+      <td>{{account.maLoaiNguoiDung}}</td>
+      <td>
+        <button class="btn btn-success">Thêm</button>
+        {{" "}}
+        <button class="btn btn-danger" (click)="deleteAccount(account.id)">Xóa</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
